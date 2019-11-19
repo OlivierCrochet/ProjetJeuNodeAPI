@@ -2,6 +2,6 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://<username>:<password>@cluster0-3n0v9.gcp.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://oliviercrochet:Password@cluster0-3n0v9.gcp.mongodb.net/ProjetJeuNodeDB?retryWrites=true', { useNewUrlParser: true });
 // Export du module mongoose
 module.exports = { mongoose }

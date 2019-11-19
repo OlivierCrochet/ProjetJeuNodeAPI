@@ -2,28 +2,27 @@
 const { mongoose } = require('../db/database.js');
 
 //Création d'un modèle dans la base de donnée
-const Device = mongoose.model('Device', {
+var userSchema = new mongoose.Schema({ 
     name: {
         type: String,
-        require: true
+        required: true
     },
-    state: {
-        type: Boolean,
-        require: true
-    },
-    type: {
+    password: {
         type: String,
-        require: true
+        required: true
     },
-    room: {
+    personnage: {
         type: String,
-        require: true
+        required: false
     },
-    historique: {
-        type: Array,
-        require: true
+    progression: {
+        type: String,
+        default: '0'
     }
 });
 
+
+const User = mongoose.model('user', userSchema);
+
 // Exportation d'un modèle
-module.exports = { Device };
+module.exports = { User };
