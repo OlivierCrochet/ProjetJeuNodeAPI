@@ -14,6 +14,7 @@ const userPost = (req, res) => {
             name: req.body.name,
             password: req.body.password
         });
+        console.log(req.body.name)
     newUser.save().then(user => res.json(user)).catch(err => res.status(500).send(err));
 }
 

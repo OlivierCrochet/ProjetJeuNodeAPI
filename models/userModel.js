@@ -16,7 +16,7 @@ var userSchema = new mongoose.Schema({
         required: false
     },
     progression: {
-        type: String,
+        type: Number,
         default: '0'
     }
 });
